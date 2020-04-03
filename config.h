@@ -7,15 +7,16 @@ static const int showbar             = 1;        /* 0 means no bar */
 static const int topbar              = 1;        /* 0 means bottom bar */
 static const char *fonts[]           = { "monospace:size=10" };
 static const char dmenufont[]        = "monospace:size=10";
-static const char col_dark_strong[]  = "#222222";
-static const char col_dark[]         = "#444444";
-static const char col_light[]        = "#bbbbbb";
-static const char col_light_strong[] = "#eeeeee";
-static const char col_accent[]       = "#005577";
+/* Custom Colors */
+static const char col_dark_strong[]  = "#191916";
+static const char col_dark[]         = "#32322d";
+static const char col_light[]        = "#c8c8b5";
+static const char col_light_strong[] = "#ffffe6";
+static const char col_accent[]       = "#ffff9b";
 static const char *colors[][3]       = {
-	/*               fg                bg               border   */
-	[SchemeNorm] = { col_light,        col_dark_strong, col_dark },
-	[SchemeSel]  = { col_light_strong, col_accent,      col_accent  },
+	/*               fg                bg               border */
+	[SchemeNorm] = { col_light,        col_dark,        col_accent },
+	[SchemeSel]  = { col_light_strong, col_dark_strong, col_accent  },
 };
 
 /* tagging */
