@@ -1,22 +1,29 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx   = 1;        /* border pixel of windows */
-static const unsigned int snap       = 32;       /* snap pixel */
-static const int showbar             = 1;        /* 0 means no bar */
-static const int topbar              = 1;        /* 0 means bottom bar */
-static const char *fonts[]           = { "monospace:size=10" };
-static const char dmenufont[]        = "monospace:size=10";
+static const unsigned int borderpx    = 1;        /* border pixel of windows */
+static const unsigned int snap        = 32;       /* snap pixel */
+static const int showbar              = 1;        /* 0 means no bar */
+static const int topbar               = 1;        /* 0 means bottom bar */
+static const char *fonts[]            = { "monospace:size=10" };
+static const char dmenufont[]         = "monospace:size=10";
 /* Custom Colors */
-static const char col_dark_strong[]  = "#191916";
-static const char col_dark[]         = "#32322d";
-static const char col_light[]        = "#c8c8b5";
-static const char col_light_strong[] = "#ffffe6";
-static const char col_accent[]       = "#ffff9b";
-static const char *colors[][3]       = {
+static const char col_dark_strong[]   = "#191916";
+static const char col_dark[]          = "#32322d";
+static const char col_light[]         = "#c8c8b5";
+static const char col_light_strong[]  = "#ffffe6";
+static const char col_accent[]        = "#ffff9b";
+static const unsigned int baralpha    = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
+static const char *colors[][3]        = {
 	/*               fg                bg               border */
 	[SchemeNorm] = { col_light,        col_dark,        col_accent },
 	[SchemeSel]  = { col_light_strong, col_dark_strong, col_accent  },
+};
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
