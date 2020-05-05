@@ -81,9 +81,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	/* Use Alt+Tab/Alt+Shift+Tab to cycle through windows */
-	{ Mod1Mask,                     XK_Tab,    focusstack,     {.i = +1 } },
-	{ Mod1Mask|ShiftMask,           XK_Tab,    focusstack,     {.i = -1 } },
+        { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+        { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
