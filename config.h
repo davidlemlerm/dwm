@@ -27,16 +27,20 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5" };
+static const char *tags[] = { "SH", "WWW", "Documents", "Music", "Pictures", "Videos" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class         instance    title       tags mask     isfloating   monitor */
+	{ "st-256color", NULL,       NULL,       1 << 0,       0,           -1 },
+	{ "URxvt",       NULL,       NULL,       1 << 0,       0,           -1 },
+	{ "Surf",        NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "MuPDF",       NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Sxiv",        NULL,       NULL,       1 << 4,       0,           -1 },
+	{ "mpv",         NULL,       NULL,       1 << 5,       0,           -1 },
 };
 
 /* layout(s) */
