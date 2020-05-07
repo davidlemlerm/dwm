@@ -1,21 +1,21 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx    = 1;        /* border pixel of windows */
-static const unsigned int snap        = 32;       /* snap pixel */
-static const int showbar              = 1;        /* 0 means no bar */
-static const int topbar               = 1;        /* 0 means bottom bar */
-static const char *fonts[]            = { "monospace:size=10" };
-static const char dmenufont[]         = "monospace:size=10";
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int snap      = 32;       /* snap pixel */
+static const int showbar            = 1;        /* 0 means no bar */
+static const int topbar             = 1;        /* 0 means bottom bar */
+static const char *fonts[]          = { "monospace:size=10" };
+static const char dmenufont[]       = "monospace:size=10";
 /* Custom Colors */
-static const char col_dark_strong[]   = "#191916";
-static const char col_dark[]          = "#32322d";
-static const char col_light[]         = "#c8c8b5";
-static const char col_light_strong[]  = "#ffffe6";
-static const char col_accent[]        = "#ffff9b";
-static const unsigned int baralpha    = 0xd0;
-static const unsigned int borderalpha = OPAQUE;
-static const char *colors[][3]        = {
+static const char col_dark_strong[]    = "#191916";
+static const char col_dark[]           = "#32322d";
+static const char col_light[]          = "#c8c8b5";
+static const char col_light_strong[]   = "#ffffe6";
+static const char col_accent[]         = "#ffff9b";
+static const unsigned int baralpha     = 0xd0;
+static const unsigned int borderalpha  = OPAQUE;
+static const char *colors[][3] = {
 	/*               fg                bg               border */
 	[SchemeNorm] = { col_light,        col_dark,        col_accent  },
 	[SchemeSel]  = { col_light_strong, col_dark_strong, col_accent  },
@@ -55,10 +55,10 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
-        { "|M|",      centeredmaster },
-        { ">M>",      centeredfloatingmaster },
-        { "[@]",      spiral },
-        { "[\\]",      dwindle },
+	{ "|M|",      centeredmaster },
+	{ ">M>",      centeredfloatingmaster },
+ 	{ "[@]",      spiral },
+ 	{ "[\\]",      dwindle },
 };
 
 /* key definitions */
@@ -82,15 +82,15 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-        /* Use Alt+Tab/Alt+Shift+Tab to cycle through windows */
-        { Mod1Mask,                     XK_Tab,    focusstack,     {.i = +1 } },
-        { Mod1Mask|ShiftMask,           XK_Tab,    focusstack,     {.i = -1 } },
+	/* Use Alt+Tab/Alt+Shift+Tab to cycle through windows */
+	{ Mod1Mask,                     XK_Tab,    focusstack,     {.i = +1 } },
+	{ Mod1Mask|ShiftMask,           XK_Tab,    focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
-	/*{ MODKEY,                       XK_Tab,    view,           {0} },*/
+/*	{ MODKEY,                       XK_Tab,    view,           {0} },*/
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	/* Use Alt+F4 to kill windows */
 	{ Mod1Mask,                     XK_F4,     killclient,     {0} },
@@ -98,10 +98,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_q,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_w,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_e,      setlayout,      {.v = &layouts[2]} },
-        { MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} },
-        { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[4]} },
-        { MODKEY,                       XK_y,      setlayout,      {.v = &layouts[5]} },
-        { MODKEY,                       XK_u,      setlayout,      {.v = &layouts[6]} },
+	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[4]} },
+	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[5]} },
+	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[6]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
@@ -128,8 +128,8 @@ static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
-	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkWinTitle,          0,              Button1,        togglewin,      {0} },
+	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
