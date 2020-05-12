@@ -1,5 +1,5 @@
 ## Patches to Apply
 
-- [ ] Centered Window Name
+- [X] Centered Window Name
 - [ ] Color Bar
 - [ ] Focus On Click
