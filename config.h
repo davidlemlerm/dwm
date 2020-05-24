@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "Hack:size=10" };
+static const char dmenufont[]       = "Hack:size=10";
 /* Custom Colors */
 static const char col_dark_strong[]    = "#191916";
 static const char col_dark[]           = "#32322d";
@@ -28,7 +28,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "SH", "WWW", "Documents", "Music", "Pictures", "Videos" };
+static const char *tags[] = { "SH", "WWW", "Documents", "Media", "Pictures" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -40,8 +40,8 @@ static const Rule rules[] = {
 	{ "URxvt",       NULL,       NULL,       1 << 0,       0,           -1 },
 	{ "Surf",        NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "MuPDF",       NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "mpv",         NULL,       NULL,       1 << 3,       0,           -1 },
 	{ "Sxiv",        NULL,       NULL,       1 << 4,       0,           -1 },
-	{ "mpv",         NULL,       NULL,       1 << 5,       0,           -1 },
 };
 
 /* layout(s) */
